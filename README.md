@@ -7,10 +7,33 @@ The request body parser middleware for [Dia](https://github.com/unger1984/dia).
 A simple usage example:
 
 ```dart
-    app.use(body());
+class ContextWithBody extends Context with ParsedBody {
+  ContextWithBody(HttpRequest request) : super(request);
+}
+
+void main() {
+  final app = App<ContextWithBody>();
+
+  app.use(body());
+
+  app.use((ctx, next) async {
+    ctx.body = ''' 
+    query=${ctx.query}
+    parsed=${ctx.parsed}
+    files=${ctx.files}
+    ''';
+  });
+
+  /// Start server listen on localhsot:8080
+  app
+      .listen('localhost', 8080)
+      .then((info) => print('Server started on http://localhost:8080'));
+}
 ```
 
 ## Named params:
+
+* `uploadDirectory` - directory for upload files. Default: `Directory.systemTemp`
 
 ## Use with:
 

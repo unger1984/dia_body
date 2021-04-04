@@ -1,4 +1,27 @@
+import 'dart:io';
+
+import 'package:dia/dia.dart' as dia;
+import 'package:dia_body/dia_body.dart';
+
+class ContextWithBody extends dia.Context with ParsedBody {
+  ContextWithBody(HttpRequest request) : super(request);
+}
+
 void main() {
-  // var awesome = Awesome();
-  // print('awesome: ${awesome.isAwesome}');
+  final app = dia.App<ContextWithBody>();
+
+  app.use(body());
+
+  app.use((ctx, next) async {
+    ctx.body = ''' 
+    query=${ctx.query}
+    parsed=${ctx.parsed}
+    files=${ctx.files}
+    ''';
+  });
+
+  /// Start server listen on localhsot:8080
+  app
+      .listen('localhost', 8080)
+      .then((info) => print('Server started on http://localhost:8080'));
 }
