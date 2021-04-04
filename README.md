@@ -1,5 +1,7 @@
 The request body parser middleware for [Dia](https://github.com/unger1984/dia).
 
+# !!IN PROGRESS!!!
+
 ## Usage:
 
 A simple usage example:
@@ -25,4 +27,4 @@ A simple usage example:
 I will be glad for any help and feedback!
 Please file feature requests and bugs at the [issue tracker][tracker].
 
-[tracker]: https://github.com/unger1984/dia_cors/issues
+[tracker]: https://github.com/unger1984/dia_body/issues

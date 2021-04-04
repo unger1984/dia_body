@@ -1,3 +1,5 @@
 library dia_body;
 
-export 'src/dia_body_base.dart';
+import 'package:dia/dia.dart';
+
+Middleware<T> cors<T extends Context>() => (T ctx, next) async {};
