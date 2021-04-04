@@ -1,7 +1,5 @@
 The request body parser middleware for [Dia](https://github.com/unger1984/dia).
 
-# !!IN PROGRESS!!!
-
 ## Usage:
 
 A simple usage example:
