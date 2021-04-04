@@ -1,5 +1,6 @@
 import 'dart:io';
 
+/// Uploaded file information
 class UploadedFile {
   final String filename;
   final File file;

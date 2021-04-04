@@ -16,6 +16,8 @@ Map<String, dynamic>? _foldToStringDynamic(Map? map) {
           <String, dynamic>{}, (out, k) => out..[k.toString()] = map[k]);
 }
 
+/// Middleware for parsing request body
+/// [uploadDirectory] - directory for uploading files, default = Directory.systemTemp;
 Middleware<T> body<T extends ParsedBody>({Directory? uploadDirectory}) =>
     (T ctx, next) async {
       ctx.query.addAll(ctx.request.uri.queryParameters);

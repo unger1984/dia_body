@@ -2,6 +2,7 @@ import 'package:dia/dia.dart';
 
 import 'uploaded_file.dart';
 
+/// mixin to Context with additional parsed fields
 mixin ParsedBody on Context {
   final Map<String, String> _query = {};
   final Map<String, dynamic> _parsed = {};
