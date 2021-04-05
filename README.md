@@ -1,4 +1,5 @@
 The request body parser middleware for [Dia](https://github.com/unger1984/dia).
+Parse query, x-www-form-urlencoded, json and form-data params and uploaded files form HttpRequest.
 
 ## Usage:
 
@@ -38,10 +39,7 @@ void main() {
 * [dia](https://github.com/unger1984/dia) - A simple dart http server in Koa2 style.
 * [dia_router](https://github.com/unger1984/dia_router) - Middleware like as koa_router.
 * [dia_cors](https://github.com/unger1984/dia_cors) - CORS middleware.
-
-## Plans:
-
-* dia_static - Package to serve static files.
+* [dia_static](https://github.com/unger1984/dia_static) - Package to serving static files.
 
 ## Features and bugs:
 

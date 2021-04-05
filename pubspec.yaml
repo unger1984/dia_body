@@ -1,13 +1,13 @@
 name: dia_body
-description: Request body parser middleware for Dia http serer.
-version: 0.0.1
+description: Request body parser middleware for Dia http serer. Parse query, x-www-form-urlencoded, json and form-data params and uploaded files form HttpRequest.
+version: 0.0.2
 homepage: https://github.com/unger1984/dia_body
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
-  dia: ^0.0.5
+  dia: ^0.0.6
   mime: ^1.0.0
   uuid: ^3.0.3
   http_parser: ^4.0.0
