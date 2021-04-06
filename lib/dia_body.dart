@@ -1,3 +1,4 @@
+/// The request body parser [Middleware] for Dia
 library dia_body;
 
 export 'src/body.dart';

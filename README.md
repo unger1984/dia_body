@@ -1,5 +1,21 @@
+<a href="https://pub.dartlang.org/packages/dia_body">  
+    <img src="https://img.shields.io/pub/v/dia_body.svg"  
+      alt="Pub Package" />  
+</a>
+
+
 The request body parser middleware for [Dia](https://github.com/unger1984/dia).
 Parse query, x-www-form-urlencoded, json and form-data params and uploaded files form HttpRequest.
+
+## Install:
+
+Add to pubspec.yaml in dependencies section this:
+
+```yaml
+    dia_body: ^0.0.3
+```
+
+Then run `pub get`
 
 ## Usage:
 
@@ -30,7 +46,7 @@ void main() {
 }
 ```
 
-## Named params:
+## Optional named params:
 
 * `uploadDirectory` - directory for upload files. Default: `Directory.systemTemp`
 

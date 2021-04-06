@@ -2,7 +2,12 @@ import 'package:dia/dia.dart';
 
 import 'uploaded_file.dart';
 
-/// mixin to Context with additional parsed fields
+/// Mixin to [Context]
+/// extends default [Context] additional fields specified
+/// for [dia_body]
+/// [query] - Uri params as ?param=value
+/// [parsed] - x-www-form-urlencoded, json and form-data params from POST/PUT
+/// [files] - uploaded files
 mixin ParsedBody on Context {
   final Map<String, String> _query = {};
   final Map<String, dynamic> _parsed = {};

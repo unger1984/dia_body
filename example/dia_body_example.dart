@@ -20,7 +20,7 @@ void main() {
     ''';
   });
 
-  /// Start server listen on localhsot:8080
+  /// Start server listen on localhost:8080
   app
       .listen('localhost', 8080)
       .then((info) => print('Server started on http://localhost:8080'));

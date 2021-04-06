@@ -1,3 +1,9 @@
+## 0.0.3
+
+- Update Dia version to 0.0.8
+- Add more information to Readme
+- Add more dartdoc comments in code
+
 ## 0.0.2
 
 - Update Dia version to 0.0.6
