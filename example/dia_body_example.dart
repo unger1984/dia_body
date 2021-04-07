@@ -1,14 +1,14 @@
 import 'dart:io';
 
-import 'package:dia/dia.dart' as dia;
+import 'package:dia/dia.dart';
 import 'package:dia_body/dia_body.dart';
 
-class ContextWithBody extends dia.Context with ParsedBody {
+class ContextWithBody extends Context with ParsedBody {
   ContextWithBody(HttpRequest request) : super(request);
 }
 
 void main() {
-  final app = dia.App<ContextWithBody>();
+  final app = App((req) => ContextWithBody(req));
 
   app.use(body());
 

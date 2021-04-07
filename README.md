@@ -12,7 +12,7 @@ Parse query, x-www-form-urlencoded, json and form-data params and uploaded files
 Add to pubspec.yaml in dependencies section this:
 
 ```yaml
-    dia_body: ^0.0.3
+    dia_body: ^0.1.0
 ```
 
 Then run `pub get`
@@ -27,7 +27,7 @@ class ContextWithBody extends Context with ParsedBody {
 }
 
 void main() {
-  final app = App<ContextWithBody>();
+  final app = App((req) => ContextWithBody(req));
 
   app.use(body());
 
@@ -56,6 +56,21 @@ void main() {
 * [dia_router](https://github.com/unger1984/dia_router) - Middleware like as koa_router.
 * [dia_cors](https://github.com/unger1984/dia_cors) - CORS middleware.
 * [dia_static](https://github.com/unger1984/dia_static) - Package to serving static files.
+
+## Migration from 0.0.*
+
+change
+
+```dart
+final app = App<ContextWithBody>();
+```
+
+to
+
+```dart
+final app = App((req) => ContextWithBody(req));
+```
+
 
 ## Features and bugs:
 

@@ -15,7 +15,7 @@ void main() {
     App<ContextWithBody>? dia;
 
     setUp(() {
-      dia = App<ContextWithBody>();
+      dia = App((req) => ContextWithBody(req));
 
       dia?.use(body());
 
