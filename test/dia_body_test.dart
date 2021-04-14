@@ -50,8 +50,11 @@ void main() {
         ctx.body = '${ctx.parsed}';
       });
 
-      final response = await http.post(Uri.parse('http://localhost:8080'),
-          body: '{"p1":"1"}', headers: {'Content-type': 'application/json'});
+      final response = await http.post(
+        Uri.parse('http://localhost:8080'),
+        body: '{"p1":"1"}',
+        headers: {'Content-type': 'application/json'},
+      );
       expect(response.body, equals('{p1: 1}'));
     });
 
@@ -76,8 +79,10 @@ void main() {
       var request =
           http.MultipartRequest('POST', Uri.parse('http://localhost:8080'))
             ..files.add(await http.MultipartFile.fromPath(
-                'file', 'test/nophoto.png',
-                contentType: MediaType('image', 'png')));
+              'file',
+              'test/nophoto.png',
+              contentType: MediaType('image', 'png'),
+            ));
       var response = await http.Response.fromStream(await request.send());
 
       expect(response.body, startsWith('{file: [filename:nophoto.png path:'));

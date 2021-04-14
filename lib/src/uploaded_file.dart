@@ -10,5 +10,5 @@ class UploadedFile {
   UploadedFile(this.filename, this.file);
 
   @override
-  String toString() => 'filename:${this.filename} path:${this.file.path}';
+  String toString() => 'filename:$filename path:${file.path}';
 }
