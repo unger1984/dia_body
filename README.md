@@ -12,7 +12,7 @@ Parse query, x-www-form-urlencoded, json and form-data params and uploaded files
 Add to pubspec.yaml in dependencies section this:
 
 ```yaml
-    dia_body: ^0.1.0
+    dia_body: ^0.1.1
 ```
 
 Then run `pub get`

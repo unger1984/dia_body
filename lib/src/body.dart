@@ -31,11 +31,14 @@ Middleware<T> body<T extends ParsedBody>({Directory? uploadDirectory}) =>
             media.parameters.containsKey('boundary')) {
           await _parseMultipart(ctx, uploadDirectory!, media, dataStream);
         } else if (media.mimeType == 'application/json') {
-          ctx.parsed.addAll(
-            _foldToStringDynamic(json.decode(await getBody()) as Map) ?? {},
-          );
+          final body = await getBody();
+          if (body.isNotEmpty) {
+            ctx.parsed
+                .addAll(_foldToStringDynamic(json.decode(body) as Map) ?? {});
+          }
         } else if (media.mimeType == 'application/x-www-form-urlencoded') {
-          ctx.parsed.addAll(Uri.splitQueryString(await getBody()));
+          final body = await getBody();
+          if (body.isNotEmpty) ctx.parsed.addAll(Uri.splitQueryString(body));
         }
       }
 

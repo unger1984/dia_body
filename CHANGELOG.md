@@ -1,3 +1,9 @@
+## 0.1.1
+
+- Update Dia version to 0.1.3
+- Add dart_code_metrics
+- Fix if body empty
+
 ## 0.1.0
 
 - Update Dia version to 0.1.0
