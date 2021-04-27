@@ -23,7 +23,7 @@ Middleware<T> body<T extends ParsedBody>({Directory? uploadDirectory}) =>
       uploadDirectory ??= Directory.systemTemp.createTempSync();
 
       Future<String> getBody() {
-        return dataStream.transform(utf8.decoder).join();
+        return utf8.decoder.bind(dataStream).join();
       }
 
       if (media != null) {

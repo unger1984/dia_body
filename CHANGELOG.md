@@ -1,3 +1,7 @@
+## 0.1.2
+
+- Fix type Utf8Decoder is not a subtype of type StreamTransformer
+
 ## 0.1.1
 
 - Update Dia version to 0.1.3
