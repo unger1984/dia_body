@@ -1,3 +1,5 @@
+# DEPRECATED! Move to MONOREPO https://github.com/unger1984/dia
+
 <a href="https://pub.dartlang.org/packages/dia_body">  
     <img src="https://img.shields.io/pub/v/dia_body.svg"  
       alt="Pub Package" />  
